@@ -1,3 +1,19 @@
 #search{
     cursor: pointer;
 }
+@media (max-width:768px) {
+    input{
+        width: 75%;
+    }
+}
+
+::-webkit-scrollbar-track{
+    background-color: #11111186;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #222;
+    border-radius: 10px;
+}
+::-webkit-scrollbar{
+    width: 14px;
+}
