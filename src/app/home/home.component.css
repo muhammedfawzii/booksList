@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+h2{
+    font-family: "Sofadi One", system-ui;
+}
+#backGround{
+    background-color: #09c;
+    border-radius: 10px 3px 5px 10px;
+}
+h3{
+    font-family: "Sofadi One", system-ui;
+    font-size: 30px;
+}
+.gradient-text{
+    background: linear-gradient(to right , rgba(120, 120, 199, 0.616) , red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.text-muted{
+    font-family: "Permanent Marker", cursive;
+}
+footer{
+    background-color: #ccc;
+}

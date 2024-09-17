@@ -1,0 +1,26 @@
+.inputSearch{
+    border: none !important;
+    border-bottom: 1px solid #09c !important;
+    box-shadow: none !important;
+}
+button{
+    border: none !important;
+}
+button:hover{
+    background-color: #09c !important;
+}
+.scale{
+    transform: scale(0.7);
+    transition: all 0.7s;
+}
+.card{
+    perspective: 2000px;
+    transition: all 0.5s;
+}
+.card:hover{
+    box-shadow: 0 0 10px #09c !important;
+}
+.scale:hover{
+    transform: rotateZ(10deg)
+    rotateY(45deg);
+}

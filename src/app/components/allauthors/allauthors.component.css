@@ -1,0 +1,25 @@
+#button-addon2{
+    border: none;
+}
+#button-addon2:hover{
+    background-color: #09c;
+}
+.inputSearch{
+    border: none !important;
+    border-bottom: 1px solid #09c !important;
+    box-shadow: none !important;
+}
+img{
+    transform: scale(0.8);
+    transition: all 0.7s;
+}
+.perspective{
+    perspective: 1000px;
+}
+img:hover{
+    transform: rotateZ(5deg)
+    rotateY(45deg);
+}
+.scale{
+    transform: scale(0.7);
+}

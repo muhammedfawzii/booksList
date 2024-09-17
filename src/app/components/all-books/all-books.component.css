@@ -1,0 +1,51 @@
+.shadow{
+    perspective: 3000px;
+}
+img{
+    transform: scale(0.7);
+    transition: all 0.6s;
+}
+img:hover{
+    /* transform: scale(0.9); */
+    transform: rotateZ(7deg)
+    /* rotateX(-10deg) */
+    rotateY(45deg);
+}
+.circle{
+    border-radius: 10px 8px 5px 8px;
+}
+#changeColor{
+    transform: translateX(350px);
+    transition: all 0.6s;
+    background: linear-gradient(90deg , #09c , #ff70a6) !important;
+    animation: bg 3s infinite !important;
+    background-clip: text;
+}
+#changeColor:hover{
+    box-shadow: inset 0 0 20px 5px #00fffc;
+    color: transparent;
+}
+
+@keyframes bg {
+    0%{
+        background-position-x: 20px;
+    }
+}
+.zoom:hover #changeColor{
+    transform: translateX(0);
+}
+.shadow:hover{
+    box-shadow: 0 0 10px #09c !important; 
+    transition: all 1s;
+}
+.inputSearch{
+    border: none !important;
+    border-bottom: 1px solid #09c !important;
+    box-shadow: none !important;
+}
+#button-addon2{
+    border: none !important;
+}
+#button-addon2:hover{
+    background-color: #09c !important;
+}

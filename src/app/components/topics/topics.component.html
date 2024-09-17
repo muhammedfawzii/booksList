@@ -1,0 +1,20 @@
+<div class="input-group mb-3 w-50 mx-auto my-3">
+    <input (keyup.enter)="searchByTopic(topicName)" [(ngModel)]="topicName" type="text" class="form-control inputSearch py-2" placeholder="search by topic of the book..." aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button (click)="searchByTopic(topicName)" class="btn btn-outline-secondary" type="button" id="button-addon2">
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+    </button>
+  </div>
+  <section class="mt-4" appScroll>
+   <div class="container">
+    <div class="row g-3">
+        @for (topic of topicList; track $index) {
+            <div class="col-md-4">
+                <div class="card animate__animated p-3" appScroll [routerLink]="['/details' , topic.id]">
+                    <img [src]="topic.formats['image/jpeg']" height="450px" class="w-100 scale" alt="">
+                    <p class="fs-5 lead text-center">{{topic.title}}</p>
+                </div>
+            </div>
+        }
+    </div>
+   </div>
+  </section>

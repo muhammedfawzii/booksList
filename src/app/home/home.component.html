@@ -1,0 +1,96 @@
+
+    <section class="vh-100 d-flex align-items-center justify-content-center flex-column position-relative">
+      <div class="h-100 w-100 position-absolute">
+        <owl-carousel-o [options]="customOptionsPhotos">
+          <ng-template carouselSlide><img src="../../assets/imgs/bookLibrary.webp" class="w-100 vh-100" alt=""></ng-template>  
+          <ng-template carouselSlide><img src="../../assets/imgs/download.jfif" class="w-100 vh-100" alt=""></ng-template>   
+        </owl-carousel-o>
+      </div>
+      <div class="caption z-3 animate__animated animate__backInDown animate__duration-9s animate__slow">
+        <div class="d-flex gap-2 text-white">
+        <h3>Get All</h3>
+        <h3 id="backGround">Books</h3>
+        <h3>you want</h3>
+        </div>
+        <h2 class="text-white fs-2">Welcome To Book Store</h2>
+      </div>
+    </section>
+
+    <section class="my-5 shadow animate__animated animate__bounceInLeft animate__duration-6s animate__slow">
+      <h2 class="my-3 gradient-text">These are some of our Popular Books</h2>
+      <owl-carousel-o [options]="customOptionsBooks">
+        @for (item of booksList.slice(0,10); track $index) {
+      <ng-template carouselSlide >
+       <div>
+        <img [src]="item.formats['image/jpeg']" height="500px" class="w-100" alt="">
+        @for (item of item.authors; track $index) {
+          <p class="text-center fs-4">{{item.name}}</p>
+        }
+       </div>
+      </ng-template>
+  
+  }
+        </owl-carousel-o>
+      
+    </section>
+    
+  
+     <!-- <section>
+      <div class="input-group mb-3 w-50  my-3 mx-auto">
+        <input [(ngModel)]="bookName" type="text" class="form-control" placeholder="search" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button (click)="searchBooks(bookName)" class="btn mx-3 btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input [(ngModel)]="topicName" type="text" class="form-control" placeholder="search" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button (click)="topicBooks(topicName)" class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+@if (!dataNotFound) {
+  <h2>data not found</h2>
+}
+      <owl-carousel-o [options]="customOptionsBooks">
+        @for (topic of topicBook; track $index) {
+      <ng-template carouselSlide >
+       <div>
+        <img [src]="topic.formats['image/jpeg']" height="500px" class="w-100" alt="">
+        @for (topic of topic.authors; track $index) {
+          <p class="text-center fs-4">{{topic.name}}</p>
+        }
+       </div>
+      </ng-template>
+  
+  }
+        </owl-carousel-o>
+      <owl-carousel-o [options]="customOptionsBooks">
+        @for (search of searchList; track $index) {
+      <ng-template carouselSlide >
+       <div>
+        <img [src]="search.formats['image/jpeg']" height="500px" class="w-100" alt="">
+        @for (search of search.authors; track $index) {
+          <p class="text-center fs-4">{{search.name}}</p>
+        }
+       </div>
+      </ng-template>
+  
+  }
+        </owl-carousel-o>
+
+      <owl-carousel-o [options]="customOptionsBooks">
+        @for (item of booksList; track $index) {
+      <ng-template carouselSlide >
+       <div>
+        <img [src]="item.formats['image/jpeg']" height="500px" class="w-100" alt="">
+        @for (item of item.authors; track $index) {
+          <p class="text-center fs-4">{{item.name}}</p>
+        }
+       </div>
+      </ng-template>
+  
+  }
+        </owl-carousel-o>
+        <div class="card flex justify-content-center">
+          <p-paginator 
+              (onPageChange)="onPageChange($event)" 
+              
+              [rows]="pageSize" 
+              [totalRecords]="totalRecords" 
+              [rowsPerPageOptions]="[10, 20, 30]" />
+      </div>
+     </section> -->
