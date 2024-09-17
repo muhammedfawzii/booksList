@@ -15,7 +15,7 @@ img:hover{
     border-radius: 10px 8px 5px 8px;
 }
 #changeColor{
-    transform: translateX(350px);
+    transform: translateX(450px);
     transition: all 0.6s;
     background: linear-gradient(90deg , #09c , #ff70a6) !important;
     animation: bg 3s infinite !important;
@@ -43,6 +43,7 @@ img:hover{
     border-bottom: 1px solid #09c !important;
     box-shadow: none !important;
 }
+
 #button-addon2{
     border: none !important;
 }
